@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body style="background-color: palevioletred;">
+    <p>Enter a number and click the button:</p>
+    <input id="id1" type="number" min="50" max="100" required>
+
+    <button onclick="myFunction()">Click Me!</button>
+    <p>Please write a number more than 50 and less than 100.</p>
+    <p id="result"></p>
+
+    <script>
+        function myFunction() {
+            var inpObj = document.getElementById("id1");
+            if (!inpObj.checkValidity()) {
+                document.getElementById("result").innerHTML = inpObj.validationMessage;
+            } else {
+                document.getElementById("result").innerHTML = "You can do the transaction";
+            }
+        }
+    </script>
+</body>
+</html>
